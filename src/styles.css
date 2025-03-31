@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom utility classes */
+.priority-high {
+  @apply border-l-4 border-red-500;
+}
+
+.priority-medium {
+  @apply border-l-4 border-yellow-500;
+}
+
+.priority-low {
+  @apply border-l-4 border-green-500;
+}
+
+/* Animation for task items */
+.task-enter {
+  @apply opacity-0 transform -translate-y-2;
+}
+.task-enter-active {
+  @apply opacity-100 transform translate-y-0 transition-all duration-200;
+}
+.task-exit {
+  @apply opacity-100;
+}
+.task-exit-active {
+  @apply opacity-0 transition-all duration-200;
+}
